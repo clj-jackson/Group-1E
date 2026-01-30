@@ -45,4 +45,19 @@ t.forward(15)
 t.left(135)
 t.forward(50)
 
+# Add 3 dots above the logo
+t.up()
+t.pencolor("#87cefa")
+t.fillcolor("#87cefa")
+dot_y_position = 10.5  # Position above the main logo
+x_positions = [30, 50, 70]  # X-axis positions for each dot
 
+for x_pos in x_positions:
+    t.goto(x_pos, dot_y_position)
+    t.down()
+    t.begin_fill()
+    t.circle(1)  # Small circle for the dot(size)
+    t.end_fill()
+    t.up()
+
+t.hideturtle() # Hide the turtle pointer
