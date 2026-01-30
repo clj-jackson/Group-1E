@@ -6,6 +6,16 @@ t = turtle.Turtle()
 t.pencolor("#00008b")
 t.fillcolor("#00008b")
 
+# Draw outer light blue outline first
+t.pensize(5)  # Set outline thickness
+t.pencolor("#87cefa")  # Light blue outline color
+for i in range(4):
+    t.forward(105)
+    t.right(90)
+
+# Draw filled dark blue square inside the outline
+t.pencolor("#00008b")
+t.fillcolor("#00008b")
 t.begin_fill()
 for i in range(4):
     t.forward(100)
@@ -34,4 +44,5 @@ t.right(90)
 t.forward(15)
 t.left(135)
 t.forward(50)
+
 
